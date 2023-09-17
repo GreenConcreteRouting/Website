@@ -208,4 +208,4 @@ def show_hide_element(visibility_state):
     return {'display': 'none'}
 
 if __name__ == "__main__":
-    app.run_server(debug=True, threaded=True)
+    app.run_server(debug=True, threaded=True, host="0.0.0.0")

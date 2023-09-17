@@ -1,8 +1,15 @@
 version: '3.3'
 services:
     app:
-        container_name: web
+        container_name: app
         restart: unless-stopped
         build: .
         ports:
             - '8050:8050'
+
+    landing:
+        container_name: landing
+        restart: unless-stopped
+        build: web/
+        ports:
+            - '80:80'
